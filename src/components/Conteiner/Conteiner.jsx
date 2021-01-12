@@ -1,3 +1,4 @@
+import React from 'react';
 import s from './Conteiner.module.css';
 
 function Conteiner({ children }) {

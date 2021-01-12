@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import s from './Profile.module.css';
 
@@ -44,9 +45,11 @@ Profile.propTypes = {
   tag: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  views: PropTypes.number,
-  likes: PropTypes.number,
-  followers: PropTypes.number,
+  stats: PropTypes.shape({
+    views: PropTypes.number,
+    likes: PropTypes.number,
+    followers: PropTypes.number,
+  }),
 };
 
 export default Profile;

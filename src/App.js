@@ -1,3 +1,4 @@
+import React from 'react';
 import Conteiner from './components/Conteiner';
 import Profile from './components/Profile';
 import Statistic from './components/Statistic';

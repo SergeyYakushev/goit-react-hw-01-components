@@ -1,3 +1,4 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import s from './TransactionHistory.module.css';
 
@@ -30,5 +31,12 @@ TransactionHistory.defaultProps = {
 };
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.number.isRequired,
+      currency: PropTypes.string.isRequired,
+    }),
+  ),
 };
